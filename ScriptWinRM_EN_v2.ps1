@@ -33,7 +33,7 @@ else {
     Write-Host "User $UserName is already an Administrator."
 }
 
-# Check WinRM (no enabling)
+# Check WinRM
 $winrmService = Get-Service -Name WinRM -ErrorAction SilentlyContinue
 
 if ($null -eq $winrmService) {
