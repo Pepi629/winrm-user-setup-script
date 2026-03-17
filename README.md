@@ -13,7 +13,11 @@ This script automates basic system preparation for inventory tasks. It creates a
 - Adds the user to the local Administrators group  
 - Checks WinRM service status  
 - Displays execution results in the console  
-
+v2 update:
+- Added interactive input for username and password via console
+- Password is now handled as SecureString (no plain text storage)
+- Removed hardcoded credentials from script
+- Improved overall security and usability
 ## Requirements
 
 - Windows 10 / 11 or Windows Server 2016+  
