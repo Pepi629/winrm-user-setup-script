@@ -1,5 +1,5 @@
 $UserName = "inventory_user"
-$PasswordPlain = "P@ssw0rd123!"
+$PasswordPlain = "rvision1"
 
 # Проверка запуска с правами администратора
 $currentUser = [Security.Principal.WindowsIdentity]::GetCurrent()
