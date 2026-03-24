@@ -113,33 +113,42 @@ All scripts provide the following capabilities:
 
 ## Execution Policy
 
-PowerShell may block execution of downloaded scripts because they are treated as files originating from the Internet.
+PowerShell may restrict script execution depending on system security policies. This is not related to the script itself, but may prevent it from running.
 
-To run the script, use one of the following options:
+For more information, see the official documentation:  
+https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy
 
-**Option 1 — Unblock the file (recommended):**
+### Temporary (Recommended)
+
+To allow script execution **only for the current PowerShell session**, run:
 
 ```powershell
-Unblock-File .\ScriptWinRM_EN.ps1
-```
+Set-ExecutionPolicy Bypass -Scope Process
+````
 
-Then run:
+This does not change system-wide settings and is безопасно for testing and one-time execution.
+
+After that, run the script normally:
 
 ```powershell
 .\ScriptWinRM_EN.ps1
 ```
 
-**Option 2 — Temporary bypass:**
+### Alternative Options
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\ScriptWinRM_EN.ps1
-```
+You can also:
 
-**Option 3 — Change execution policy:**
+* Unblock the downloaded file:
 
-```powershell
-Set-ExecutionPolicy RemoteSigned
-```
+  ```powershell
+  Unblock-File .\ScriptWinRM_EN.ps1
+  ```
+
+* Or set execution policy permanently (requires caution):
+
+  ```powershell
+  Set-ExecutionPolicy RemoteSigned
+  ```
 
 ---
 
