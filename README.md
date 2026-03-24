@@ -144,10 +144,10 @@ You can also:
   Unblock-File .\ScriptWinRM_EN.ps1
   ```
 
-* Or set execution policy permanently (requires caution):
+* Or set execution policy permanently (requires caution!!!):
 
   ```powershell
-  Set-ExecutionPolicy RemoteSigned
+  Set-ExecutionPolicy Unrestricted
   ```
 
 ---
