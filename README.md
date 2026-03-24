@@ -22,6 +22,11 @@ The scripts differ in credential handling, language, and compatibility with lega
 - No user interaction required  
 - Available in English and Russian  
 
+**Supported systems:**
+
+Windows 10 / 11
+Windows Server  2016+
+
 **Use case:** automated deployment and controlled environments  
 
 ---
@@ -33,6 +38,11 @@ The scripts differ in credential handling, language, and compatibility with lega
 - Prompts user to enter username and password via console  
 - No hardcoded credentials  
 - Improved security and flexibility  
+
+**Supported systems:**
+
+Windows 10 / 11
+Windows Server  2016+
 
 **Use case:** manual execution, demonstrations, secure environments  
 
